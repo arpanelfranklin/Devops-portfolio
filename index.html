@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Arpanel Franklin — DevOps Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --a1:#3b6ef8;--a2:#8b5cf6;--a3:#0ea5e9;--a4:#10b981;--a5:#f59e0b;
@@ -16,6 +16,9 @@
   --sh:0 8px 32px rgba(59,110,248,0.13),0 2px 8px rgba(0,0,0,0.06);
   --shlg:0 24px 64px rgba(59,110,248,0.2),0 4px 20px rgba(0,0,0,0.09);
   --blur:blur(22px) saturate(190%);--r:20px;--r2:14px;
+  --font-main: 'Inter', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-reg: 400;
 }
 [data-theme="dark"]{
   --bg:#070b18;--bg2:#0c1026;
@@ -28,7 +31,8 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;overflow-x:hidden;transition:background .4s,color .4s}
+body{font-family:var(--font-main),sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;overflow-x:hidden;transition:background .4s,color .4s,-webkit-font-smoothing: antialiased; /* Makes Inter look extra crisp on Mac */
+  -moz-osx-font-smoothing: grayscale;}
 .orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);animation:drift 18s ease-in-out infinite alternate}
 .orb1{width:700px;height:500px;top:-10%;left:-15%;background:radial-gradient(ellipse,rgba(59,110,248,0.22),transparent 70%);animation-delay:0s}
@@ -55,7 +59,8 @@ section{padding:90px 0}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--surf2);border:1px solid var(--bdr2);border-radius:999px;padding:7px 18px;font-size:12.5px;font-weight:600;color:var(--a1);margin-bottom:24px;backdrop-filter:var(--blur)}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--a4);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
-h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(40px,5.5vw,68px);line-height:1.05;letter-spacing:-2px;margin-bottom:10px}
+h1{font-weight:800;font-size:clamp(40px,5.5vw,68px);line-height:1.05;letter-spacing:-2px;margin-bottom:10px font-weight: 800; /* Extra bold for a strong professional presence */
+  letter-spacing: -0.02em}
 h1 .gr{background:linear-gradient(135deg,var(--a1) 0%,var(--a2) 45%,var(--a3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .role{font-size:18px;font-weight:300;color:var(--tx2);margin-bottom:22px}
 .hdesc{font-size:15px;line-height:1.8;color:var(--tx3);max-width:500px;margin-bottom:34px}
@@ -72,7 +77,7 @@ h1 .gr{background:linear-gradient(135deg,var(--a1) 0%,var(--a2) 45%,var(--a3) 10
 .hcard p{font-size:12.5px;color:var(--tx3);margin-bottom:18px}
 .sg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .sb{background:var(--surf2);border:1px solid var(--bdr2);border-radius:var(--r2);padding:14px 10px}
-.sv{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;background:linear-gradient(135deg,var(--a1),var(--a2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sv{font-size:22px;font-weight:800;background:linear-gradient(135deg,var(--a1),var(--a2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .sl{font-size:10.5px;color:var(--tx3);margin-top:2px}
 .pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;justify-content:center}
 .pill{font-size:11px;font-weight:600;padding:4px 12px;border-radius:999px;background:var(--surf2);border:1px solid var(--bdr2);color:var(--tx2)}
@@ -82,7 +87,7 @@ h1 .gr{background:linear-gradient(135deg,var(--a1) 0%,var(--a2) 45%,var(--a3) 10
 .sg2{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px}
 .skc{padding:24px}
 .ski{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:15px}
-.skc h4{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:11px}
+.skc h4{font-size:15px;font-weight:700;margin-bottom:11px}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-size:11.5px;padding:4px 12px;border-radius:999px;background:var(--surf2);border:1px solid var(--bdr2);color:var(--tx2);font-weight:500;transition:all .2s;cursor:default}
 .tag:hover{border-color:var(--a1);color:var(--a1)}
@@ -93,13 +98,13 @@ h1 .gr{background:linear-gradient(135deg,var(--a1) 0%,var(--a2) 45%,var(--a3) 10
 .pc:hover{transform:translateY(-5px);box-shadow:var(--shlg)}
 .pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--a1),var(--a2),var(--a3));opacity:0;transition:opacity .3s}
 .pc:hover::before{opacity:1}
-.pnum{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--a1);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.pnum{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--a1);margin-bottom:14px;display:flex;align-items:center;gap:8px}
 .pnum::after{content:'';flex:1;height:1px;background:var(--bdr2)}
-.pc h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.3}
+.pc h3{font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.3}
 .pc p{font-size:13.5px;color:var(--tx3);line-height:1.75;margin-bottom:16px}
 .pm{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
 .mbox{display:flex;flex-direction:column;background:var(--surf2);border:1px solid var(--bdr2);border-radius:12px;padding:10px 14px}
-.mv{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;background:linear-gradient(135deg,var(--a4),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mv{font-size:19px;font-weight:800;background:linear-gradient(135deg,var(--a4),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ml{font-size:10px;color:var(--tx3);margin-top:1px}
 .pstack{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
 .stag{font-size:11px;padding:3px 11px;border-radius:999px;background:var(--surf2);border:1px solid var(--bdr2);color:var(--tx3)}
@@ -120,7 +125,7 @@ h1 .gr{background:linear-gradient(135deg,var(--a1) 0%,var(--a2) 45%,var(--a3) 10
 .tli{position:relative;margin-bottom:36px}
 .tld{position:absolute;left:-30px;top:4px;width:17px;height:17px;border-radius:50%;background:linear-gradient(135deg,var(--a1),var(--a2));box-shadow:0 0 0 3px var(--bg),0 0 12px var(--glow1)}
 .tly{font-size:12px;font-weight:700;color:var(--a3);margin-bottom:4px}
-.tlt{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:2px}
+.tlt{font-size:17px;font-weight:700;margin-bottom:2px}
 .tlo{font-size:13.5px;color:var(--tx3);margin-bottom:8px}
 .tldesc{font-size:13.5px;color:var(--tx2);line-height:1.75}
 /* contact */
@@ -133,7 +138,7 @@ h1 .gr{background:linear-gradient(135deg,var(--a1) 0%,var(--a2) 45%,var(--a3) 10
 .clink:hover{border-color:var(--a1);color:var(--a1);transform:translateX(4px)}
 .ci{width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
 .certc{padding:30px}
-.certc h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:18px}
+.certc h3{font-size:18px;font-weight:700;margin-bottom:18px}
 .citem{display:flex;align-items:flex-start;gap:14px;padding:14px;border-radius:var(--r2);background:var(--surf2);border:1px solid var(--bdr2);margin-bottom:10px}
 .cdot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px}
 .ci2 h5{font-size:13.5px;font-weight:600;margin-bottom:2px}
